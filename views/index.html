@@ -1,0 +1,85 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Timestamp Microservice</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+        
+    <!-- import Google fonts and awesome icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">        
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">   
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet" type="text/css">  
+  </head>
+  
+  <body>
+    <div id="container">
+      <h1>Timestamp Microservice</h1>
+      <h3>FreeCodeCamp APIs & Microservices Project</h3>
+      
+      <p>Timestamp accepts a string as a parameter and checks it. To use this app append the desired string at the end of the url,
+        in other words, the API endpoint is: <br>
+        <code>GET [project_url]/api/timestamp/:date_string?</code>
+      </p>
+      
+      <ul>
+        <li>If the date string is <strong>empty</strong>, it should be equivalent to the service using the current timestamp. It triggers: <br> 
+          <code>new Date()</code>.
+        </li>
+        <li>A date string is <strong>valid</strong> if can be successfully parsed by: <br> 
+          <code>new Date(date_string)</code>.<br>
+        </li>
+        <li>If the date string is <strong>valid</strong>, the API returns a JSON with the structure: <br>
+          <code>{"unix": &lt;date.getTime()&gt;, "utc":&lt;date.toUTCString()&gt;}</code> <br>
+          Example: <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code>          
+        </li>
+        <li>If the date string is <strong>invalid</strong>, the API returns a JSON with the following structure: <br>
+          <code>{"unix": null, "utc" : "Invalid Date" }</code>
+        </li>
+        <li>
+          Note that the unix timestamp needs to be an <strong>integer</strong> (not a string) specifying <strong>milliseconds</strong>.<br> 
+          FCC test uses date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.
+        </li>
+      </ul>
+      
+      <h3>Example of Usage:</h3>
+      <a href="https://timestampmel.glitch.me/api/timestamp/2015-12-25" target="_blank">
+        https://timestampmel.glitch.me/api/timestamp/2015-12-25
+      </a> <br>
+      <a href="https://timestampmel.glitch.me/api/timestamp/1450137600" target="_blank">
+        https://timestampmel.glitch.me/api/timestamp/1450137600
+      </a>
+      
+      <h3>Expected Response:</h3>
+      <p><code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code></p>
+    </div>
+    
+    <footer>
+      <div id="footer-row1">
+        <a class="button" href="https://www.freecodecamp.com/meleany" target="_blank"> <i class="fa fa-free-code-camp fa-2x fa-fw"></i> </a> 
+        <a class="button" href="https://github.com/meleany" target="_blank"> <i class="fa fa-github-alt fa-2x fa-fw"></i> </a>
+        <a class="button" href="https://codepen.io/meleany" target="_blank"> <i class="fa fa-codepen fa-2x fa-fw"></i> </a>
+        <a class="button" href="https://ymelbart.wordpress.com/" target="_blank"> <i class="fa fa-wordpress fa-2x fa-fw"></i> </a>
+      </div>
+      <div id="footer-row2">
+        Yasmin Melean &copy 2019. All rights reserved.
+      </div>
+    </footer>
+
+  </body>
+</html>

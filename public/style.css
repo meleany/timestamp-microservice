@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Roboto, "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 16px;
+  text-align: justify;
+}
+
+h1 {
+  font-family: Orbitron;
+  font-weight: bold;
+  font-size: 32px;
+  color: rgba(95, 20, 150, 0.9);
+  text-align: center;
+  padding: 35px 0px;
+  border-bottom: 5px double rgba(10,50,70,0.5);
+}
+
+h3 {
+  font-family: Electrolize;
+  text-align: center;
+  color: rgba(95, 20, 150, 0.95);
+  padding: 20px 10px 50px 10px;
+
+}
+
+#container {
+  margin: 0 14%;
+  line-height: 1.5em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+br {
+  margin: 10px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;  
+}
+
+i {
+  margin: 0 5px;  
+}
+
+footer {
+  font-family: Abel;
+  font-size: 16px;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 5px double rgba(10,50,70,0.5);
+  text-align: center;
+  padding: 10px;
+}
+
+#footer-row1 {
+  margin: 10px;
+}
