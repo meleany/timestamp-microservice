@@ -22,7 +22,7 @@ const checkString = function(params) {
     const regexTest = /^\-?\d+$/.test(params);
     if(regexTest) {
       const parseIntParams = parseInt(params);
-      dateValue = new Date(parseIntParams*1000);
+      dateValue = new Date(parseIntParams);
     }
   }
 
@@ -48,7 +48,12 @@ app.get('/api/timestamp', function(req, res) {
 // GET the parameter passed in the url and checks if it is a natural date, an Unix timestamp, etc.
 app.get('/api/timestamp/:date', function(req, res) {
   checkString(req.params.date);
-  res.json({"unix":dateStringToUnix, "utc": dateStringToUTC });
+  if(dateStringToUTC == "Invalid Date"){
+    res.json({"error": dateStringToUTC });
+  }else{
+    res.json({"unix":dateStringToUnix, "utc": dateStringToUTC });  
+  }
+  //res.json({"here": dateStringToUTC});
 });
 
 // Starts the server and listens for requests in PORT
