@@ -53,7 +53,6 @@ app.get('/api/timestamp/:date', function(req, res) {
   }else{
     res.json({"unix":dateStringToUnix, "utc": dateStringToUTC });  
   }
-  //res.json({"here": dateStringToUTC});
 });
 
 // Starts the server and listens for requests in PORT
